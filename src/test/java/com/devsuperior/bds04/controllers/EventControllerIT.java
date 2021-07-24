@@ -42,7 +42,6 @@ public class EventControllerIT {
 	
 	@BeforeEach
 	void setUp() throws Exception {
-		
 		clientUsername = "ana@gmail.com";
 		clientPassword = "123456";
 		adminUsername = "bob@gmail.com";
@@ -51,7 +50,6 @@ public class EventControllerIT {
 
 	@Test
 	public void insertShouldReturn401WhenNoUserLogged() throws Exception {
-
 		EventDTO dto = new EventDTO(null, "Expo XP", LocalDate.of(2021, 5, 18), "https://expoxp.com.br", 1L);
 		String jsonBody = objectMapper.writeValueAsString(dto);
 		
@@ -177,7 +175,6 @@ public class EventControllerIT {
 
 	@Test
 	public void findAllShouldReturnPagedResources() throws Exception {
-		
 		ResultActions result =
 				mockMvc.perform(get("/events")
 					.contentType(MediaType.APPLICATION_JSON));
