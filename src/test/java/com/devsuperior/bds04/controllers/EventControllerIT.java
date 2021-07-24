@@ -64,7 +64,6 @@ public class EventControllerIT {
 
 	@Test
 	public void insertShouldInsertResourceWhenClientLoggedAndCorrectData() throws Exception {
-
 		String accessToken = tokenUtil.obtainAccessToken(mockMvc, clientUsername, clientPassword);
 		LocalDate nextMonth = LocalDate.now().plusMonths(1L);
 		
@@ -88,7 +87,6 @@ public class EventControllerIT {
 
 	@Test
 	public void insertShouldInsertResourceWhenAdminLoggedAndCorrectData() throws Exception {
-
 		String accessToken = tokenUtil.obtainAccessToken(mockMvc, adminUsername, adminPassword);
 		LocalDate nextMonth = LocalDate.now().plusMonths(1L);
 		
@@ -112,7 +110,6 @@ public class EventControllerIT {
 
 	@Test
 	public void insertShouldReturn422WhenAdminLoggedAndBlankName() throws Exception {
-
 		String accessToken = tokenUtil.obtainAccessToken(mockMvc, adminUsername, adminPassword);
 		LocalDate nextMonth = LocalDate.now().plusMonths(1L);
 		
@@ -133,7 +130,6 @@ public class EventControllerIT {
 
 	@Test
 	public void insertShouldReturn422WhenAdminLoggedAndPastDate() throws Exception {
-
 		String accessToken = tokenUtil.obtainAccessToken(mockMvc, adminUsername, adminPassword);
 		LocalDate pastMonth = LocalDate.now().minusMonths(1L);
 		
@@ -154,7 +150,6 @@ public class EventControllerIT {
 
 	@Test
 	public void insertShouldReturn422WhenAdminLoggedAndNullCity() throws Exception {
-
 		String accessToken = tokenUtil.obtainAccessToken(mockMvc, adminUsername, adminPassword);
 		LocalDate nextMonth = LocalDate.now().plusMonths(1L);
 		
